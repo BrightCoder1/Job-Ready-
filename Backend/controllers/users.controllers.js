@@ -84,3 +84,17 @@ exports.getProfile = async (req, res) => {
         user: req.user
     })
 }
+
+
+
+exports.logoutUser = async (req, res) => {
+    try{
+        console.log("Logging out user:", req.user);
+        res.clearCookie('token');
+        res.status(200).json({ message: 'Logout successful' });
+
+    }catch(error){
+        console.error(error);
+        res.status(500).json({ message: 'Server error' });
+    }
+}
