@@ -1,0 +1,127 @@
+/* ApplyProcess.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.apply-process {
+    width: 100%;
+    min-height: 100vh;
+    background: #2b2f8f;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Background Pattern */
+.apply-process::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("https://www.transparenttextures.com/patterns/topography.png");
+    opacity: 0.1;
+}
+
+.overlay {
+    position: relative;
+    z-index: 2;
+    padding: 80px 8%;
+}
+
+.sub-heading {
+    text-align: center;
+    color: #ff3158;
+    font-size: 19px;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.main-heading {
+    text-align: center;
+    color: white;
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 80px;
+}
+
+.process-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.process-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 60px 40px;
+    text-align: center;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+.process-card:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.icon {
+    font-size: 60px;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.process-card h2 {
+    color: white;
+    font-size: 30px;
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.process-card p {
+    color: #d6d6e7;
+    font-size: 17px;
+    line-height: 1.9;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+    .process-container {
+        grid-template-columns: 1fr;
+    }
+
+    .main-heading {
+        font-size: 50px;
+    }
+
+    .process-card h2 {
+        font-size: 30px;
+    }
+
+    .process-card p {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 600px) {
+    .overlay {
+        padding: 60px 20px;
+    }
+
+    .main-heading {
+        font-size: 40px;
+    }
+
+    .process-card {
+        padding: 40px 25px;
+    }
+
+    .icon {
+        font-size: 55px;
+    }
+
+    .process-card h2 {
+        font-size: 24px;
+    }
+}

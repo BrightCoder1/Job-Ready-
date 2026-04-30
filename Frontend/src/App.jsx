@@ -8,6 +8,8 @@ import Dashboard from './pages/Dashboard.jsx';
 import Login from './pages/Login.jsx';
 import UserContext from './context/UserContext.jsx';
 import UserProtectWrapper from './pages/UserProtectWrapper.jsx';
+import Footer1 from './pages/Footer1.jsx';
+import Footer2 from './pages/Footer2.jsx';
 
 const App = () => {
   return (
@@ -25,6 +27,8 @@ const App = () => {
               </UserProtectWrapper>
             } />
           </Routes>
+          <Footer1 />
+          <Footer2 />
         </UserContext>
       </BrowserRouter>
     </>
