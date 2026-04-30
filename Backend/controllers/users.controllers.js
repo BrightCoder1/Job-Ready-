@@ -12,6 +12,9 @@ exports.registerUser = async (req, res) => {
         }
 
         const { fullname, email, password, phone, address } = req.body;
+        
+        
+        console.log("Received registration data: ", req.body);
 
         const existingUser = await DataModel.findOne({ email })
 

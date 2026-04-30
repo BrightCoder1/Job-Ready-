@@ -1,0 +1,72 @@
+.nav {
+    display: flex;
+    width: 100%;
+    /* height: 40px; */
+    color: #fff;
+    background-color: #000000e3;
+    padding: 15px 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+}
+
+.logo {
+    font-size: 2rem;
+    color: #ff003f;
+}
+
+.logo-spn {
+    color: #fff;
+}
+
+.nav-options {
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 3rem;
+    margin-right: 20px;
+    align-items: center;
+}
+
+.div-btn {
+    display: flex;
+    gap: 2rem;
+}
+
+.btn {
+    border: 2px solid #ff003f;
+    color: #ff003f;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+
+.btn-bg {
+    background-color: #ff003f;
+    color: #fff;
+}
+
+.btn-bg:hover{
+    background-color: transparent;
+    color: #ff003f;
+    transition: 0.2s;
+}
+
+.btn-hover:hover{
+    background-color: #ff003f;
+    color: #fff;
+    transition: 0.2s;
+}
+
+.link-nav{
+    color: #fff;
+}
+
+.link-nav:hover{
+    color: #ff003f;
+    transition: 0.2s;
+}
