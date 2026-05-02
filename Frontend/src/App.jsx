@@ -10,6 +10,8 @@ import UserContext from './context/UserContext.jsx';
 import UserProtectWrapper from './pages/UserProtectWrapper.jsx';
 import Footer1 from './pages/Footer1.jsx';
 import Footer2 from './pages/Footer2.jsx';
+import About from './pages/About.jsx';
+import Contact from './pages/Contact.jsx';
 
 const App = () => {
   return (
@@ -21,6 +23,8 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/signup" element={<Register />} />
             <Route path="/signin" element={<Login />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<Contact />} />
             <Route path="/dashboard" element={
               <UserProtectWrapper>
                 <Dashboard />
