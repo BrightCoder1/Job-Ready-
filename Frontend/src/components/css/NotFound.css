@@ -1,0 +1,109 @@
+/* NotFound.css */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.notfound-container {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    135deg,
+    #eff6ff,
+    #dbeafe
+  );
+
+  padding: 20px;
+}
+
+.notfound-content {
+  width: 100%;
+  max-width: 500px;
+
+  background: white;
+
+  padding: 50px 40px;
+
+  border-radius: 24px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.notfound-content h1 {
+  font-size: 120px;
+  color: #2563eb;
+
+  line-height: 1;
+
+  margin-bottom: 10px;
+}
+
+.notfound-content h2 {
+  font-size: 36px;
+  color: #0f172a;
+
+  margin-bottom: 15px;
+}
+
+.notfound-content p {
+  font-size: 17px;
+  color: #64748b;
+
+  line-height: 1.7;
+
+  margin-bottom: 30px;
+}
+
+/* Button */
+
+.home-btn {
+  display: inline-block;
+
+  text-decoration: none;
+
+  background: #2563eb;
+  color: white;
+
+  padding: 14px 28px;
+
+  border-radius: 12px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  transition: 0.3s ease;
+}
+
+.home-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-3px);
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .notfound-content {
+    padding: 40px 25px;
+  }
+
+  .notfound-content h1 {
+    font-size: 90px;
+  }
+
+  .notfound-content h2 {
+    font-size: 28px;
+  }
+
+  .notfound-content p {
+    font-size: 15px;
+  }
+}

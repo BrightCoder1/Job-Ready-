@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.myjob-page {
+  width: 100%;
+  min-height: 100vh;
+  background: #f4f7fb;
+
+  padding: 40px;
+  padding-left: 300px;
+}
+
+.myjob-header {
+  margin-bottom: 40px;
+}
+
+.myjob-header h1 {
+  font-size: 40px;
+  color: #0f172a;
+  margin-bottom: 10px;
+}
+
+.myjob-header p {
+  font-size: 17px;
+  color: #64748b;
+}
+
+.myjob-container {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+
+  gap: 30px;
+}
+
+.job-card {
+  background: #ffffff;
+  border-radius: 20px;
+
+  padding: 25px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s ease;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  min-height: 260px;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Top */
+
+.job-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 15px;
+
+  margin-bottom: 25px;
+}
+
+.job-top h2 {
+  font-size: 28px;
+  color: #0f172a;
+  word-break: break-word;
+}
+
+/* Status */
+
+.status {
+  padding: 8px 16px;
+  border-radius: 30px;
+
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.status.applied {
+  background: #2563eb;
+}
+
+.status.interview {
+  background: #f59e0b;
+}
+
+.status.selected {
+  background: #16a34a;
+}
+
+.status.rejected {
+  background: #dc2626;
+}
+
+/* Details */
+
+.job-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  margin-bottom: 30px;
+}
+
+.detail-box {
+  background: #f8fafc;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.detail-box h4 {
+  font-size: 14px;
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.detail-box p {
+  font-size: 17px;
+  color: #1e293b;
+  font-weight: 500;
+}
+
+/* Button */
+
+.view-btn {
+  width: 100%;
+
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+
+  background: #2563eb;
+  color: white;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.view-btn:hover {
+  background: #1d4ed8;
+}
+
+/* Responsive */
+
+@media (max-width: 992px) {
+  .myjob-page {
+    padding-left: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .myjob-page {
+    padding: 20px;
+  }
+
+  .myjob-header h1 {
+    font-size: 32px;
+  }
+
+  .job-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .job-top h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 500px) {
+  .myjob-container {
+    grid-template-columns: 1fr;
+  }
+
+  .job-card {
+    padding: 20px;
+  }
+}

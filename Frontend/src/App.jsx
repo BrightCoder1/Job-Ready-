@@ -21,6 +21,8 @@ import Job from './pages/Job.jsx';
 import Profile from './components/Profile.jsx';
 import LeftNavbar from './components/LeftNavbar.jsx';
 import NotificationPage from './pages/NotificationPage.jsx';
+import MyJob from './pages/MyJob.jsx';
+import NotFound from './components/NotFound.jsx';
 
 
 // Layout Component
@@ -32,7 +34,12 @@ const Layout = () => {
   const dashboardPages =
     location.pathname === "/dashboard" ||
     location.pathname === "/profile" ||
-    location.pathname === "/notifications";
+    location.pathname === "/notifications" ||
+    location.pathname === "/myjobs" ||
+    location.pathname === "/jobdetail" ||
+    location.pathname === "/post" ||
+    location.pathname === "/mail" ||
+    location.pathname === "/settings";
 
   return (
     <>
@@ -76,9 +83,51 @@ const Layout = () => {
             </UserProtectWrapper>
           }
         />
+
+        <Route
+          path="/myjobs"
+          element={
+            <UserProtectWrapper>
+              <MyJob />
+            </UserProtectWrapper>
+          }
+        />
+
+        <Route
+          path="/jobdetail"
+          element={
+            <UserProtectWrapper>
+              {/* <MyJob /> */}
+              <NotFound />
+
+            </UserProtectWrapper>
+          }
+        />
+
+        <Route
+          path="/mail"
+          element={
+            <UserProtectWrapper>
+              {/* <MyJob /> */}
+              <NotFound />
+
+            </UserProtectWrapper>
+          }
+        />
+
+        <Route
+          path="/post"
+          element={
+            <UserProtectWrapper>
+              {/* <MyJob /> */}
+              <NotFound />
+
+            </UserProtectWrapper>
+          }
+        />
+
       </Routes>
 
-      {/* Hide Footer on Dashboard/Profile */}
       {!dashboardPages && (
         <>
           <Footer1 />

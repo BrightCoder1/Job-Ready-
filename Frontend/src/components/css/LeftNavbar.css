@@ -11,19 +11,48 @@
     height: 100vh;
     background: #111827;
     color: white;
+
     padding: 20px;
+
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 30px;
+
     position: fixed;
     left: 0;
     top: 0;
+
+    /* Scroll Fix */
+
+    overflow-y: auto;
+
+    scrollbar-width: thin;
+    scrollbar-color: #374151 #111827;
 }
+
+/* Chrome Scrollbar */
+
+.left-navbar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.left-navbar::-webkit-scrollbar-track {
+    background: #111827;
+}
+
+.left-navbar::-webkit-scrollbar-thumb {
+    background: #374151;
+    border-radius: 10px;
+}
+
+/* Logo */
 
 .logo-section {
     display: flex;
     align-items: center;
     gap: 12px;
+
+    min-height: 60px;
 }
 
 .logo {
@@ -37,22 +66,33 @@
     font-weight: 700;
 }
 
+/* Nav Links */
+
 .nav-links {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 12px;
 }
+
+/* Nav Item */
 
 .nav-item {
     text-decoration: none;
     color: white;
+
     display: flex;
     align-items: center;
     gap: 14px;
+
     padding: 14px 16px;
+
     border-radius: 10px;
+
     transition: 0.3s ease;
+
     font-size: 17px;
+
+    min-height: 55px;
 }
 
 .nav-item:hover {
@@ -65,20 +105,26 @@
 
 .nav-icon {
     font-size: 20px;
+    min-width: 20px;
 }
 
-
-/* Add This in LeftNavbar.css */
+/* Logout Button */
 
 .logout-btn {
     margin-top: auto;
+
     width: 100%;
+
     padding: 14px;
+
     border: none;
     border-radius: 10px;
+
     background: #dc2626;
     color: white;
+
     font-size: 16px;
+
     cursor: pointer;
 
     display: flex;
@@ -87,6 +133,8 @@
     gap: 10px;
 
     transition: 0.3s;
+
+    min-height: 55px;
 }
 
 .logout-btn:hover {
@@ -95,4 +143,20 @@
 
 .logout-icon {
     font-size: 18px;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .left-navbar {
+        width: 230px;
+    }
+
+    .logo-section h2 {
+        font-size: 20px;
+    }
+
+    .nav-item {
+        font-size: 15px;
+    }
 }
