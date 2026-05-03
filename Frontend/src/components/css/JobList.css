@@ -1,0 +1,182 @@
+:root {
+    --primary-blue: #4a69bd;
+    --text-dark: #2c3e50;
+    --text-light: #7f8c8d;
+    --bg-gray: #f9f9f9;
+    --border-color: #e0e0e0;
+}
+
+.job-page-container {
+    display: flex;
+    padding: 40px;
+    background-color: var(--bg-gray);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    gap: 30px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    height: fit-content;
+    border: 1px solid var(--border-color);
+}
+
+.filter-group {
+    margin-bottom: 30px;
+}
+
+.filter-group h3 {
+    font-size: 16px;
+    color: var(--text-dark);
+    margin-bottom: 15px;
+}
+
+.filter-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    color: var(--text-light);
+}
+
+.checkbox-container {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: var(--text-light);
+    cursor: pointer;
+}
+
+/* Main Content Styling */
+.main-content {
+    flex: 1;
+}
+
+.results-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.job-card {
+    background: white;
+    padding: 25px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    transition: transform 0.2s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+.job-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.job-info-left {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.company-logo {
+    width: 60px;
+    height: 60px;
+    border: 1px solid #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+}
+
+.job-details h2 {
+    font-size: 20px;
+    color: var(--text-dark);
+    margin: 0 0 8px 0;
+}
+
+.job-meta {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+.salary {
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.job-info-right {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-type {
+    border: 1px solid var(--primary-blue);
+    color: var(--primary-blue);
+    background: transparent;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.post-time {
+    font-size: 13px;
+    color: var(--text-light);
+}
+
+/* Container for the badge and button */
+.action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    /* Spacing between Full Time and Apply button */
+    justify-content: flex-end;
+}
+
+/* Style for the new Apply Button */
+.btn-apply {
+    background-color: #4a69bd;
+    /* Matching the primary blue */
+    color: white;
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.btn-apply:hover {
+    background-color: #3855a8;
+}
+
+/* Ensure the right side stacks correctly */
+.job-info-right {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn-type {
+    border: 1px solid #e0e0e0;
+    color: #7f8c8d;
+    background: transparent;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: default;
+}
+
